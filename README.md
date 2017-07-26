@@ -1,4 +1,4 @@
 # basicbrute
 Bruteforce basic auth
-
-### python basicbrute.py
+#### First create a users.txt file with usernames, one per line
+### Usage: python basicbrute.py

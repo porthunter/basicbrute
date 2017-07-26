@@ -6,7 +6,6 @@ import pkgutil
 import sys
 
 def main():
-    genWordlist()
     checkUserList()
 
 def genWordlist():
@@ -17,10 +16,11 @@ def genWordlist():
 
     cmd = "crunch "+minchars+" "+maxchars+" "+extracrunch+" -o pass.txt"
     subprocess.call(cmd, shell=True)
+    startNmap()
 
 def checkUserList():
     if os.path.isfile('users.txt'):
-        startNmap()
+        genWordlist()
     else:
         print "You need to create a list of users... users.txt one user per line"
 
